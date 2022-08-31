@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/31382af068.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Roboto:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+    <title>Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            display: flex;
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 8px;
+        }
+
+        nav ul li a {
+            display: block;
+            text-decoration: none;
+            padding: 16px;
+            color: #00ba5d;
+            font-size: 20px;
+        }
+
+        nav ul li a:hover {
+            color: black;
+        }
+
+        .active {
+            color: black;
+        }
+
+        header img {
+            width: 70%;
+            display: block;
+        }
+
+        .hero-banner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background-image: url('./Project/hero-banner-image.png');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 90vh;
+            z-index: -1;
+        }
+
+        .content h1 {
+            color: white;
+            font-size: 40px;
+            font-family: 'raleway';
+        }
+
+        .content a {
+            text-decoration: none;
+            background-color: green;
+            padding: 8px 16px;
+            margin: 8px 16px;
+            color: white;
+        }
+
+        .content {
+            width: 90%;
+            margin: auto;
+        }
+
+        .container {
+            width: 70%;
+            margin: auto;
+        }
+
+        .col.col-6 {
+            width: 49%;
+            display: inline-block;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        a.ctn {
+            text-decoration: none;
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border-radius: 3px;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        .col.col-9 {
+            display: inline-block;
+            float: left;
+            width: 61%;
+        }
+
+        .col.col-3 {
+            display: inline-block;
+            float: left;
+            width: 39%;
+            padding: 45px;
+        }
+
+        .col.col-4 {
+            display: inline-block;
+            width: 33%;
+        }
+
+        .dark-bg {
+            background: #393d41;
+            color: white;
+        }
+
+        .image-responsive {
+            width: 90%;
+        }
+
+        .dark-bg .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .footer-content {
+            padding: 40px 0;
+            color: white;
+            background: green
+        }
+
+        .footer-text {
+            background: #3b962a;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .light-bg {
+            background: #ede7e7b0;
+            box-sizing: border-box;
+            padding: 40px;
+        }
+
+        .form-content input[type="text"] {
+            width: 80%;
+            padding: 8px;
+        }
+
+        .form-content {
+            margin: 8px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 3px;
+            margin: 8px;
+            border: 0.2px solid black;
+        }
+
+        .sidebar {
+            background: #393d41;
+            color: white;
+            box-sizing: border-box;
+            padding: 40px;
+        }
+
+        .sidebar-content {
+            margin: 16px 0;
+            padding: 3px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            padding: 8px;
+            width: 90%;
+        }
+
+        span {
+            color: red;
+        }
+
+        label {
+            margin: 8px 0;
+            display: block;
+        }
+
+        .contact-box {
+            padding: 40px 0;
+            background: green;
+            color: white;
+        }
+
+        .contact-box i {
+            padding: 6px;
+            background: rgb(155, 146, 146);
+            border-radius: 50px;
+        }
+
+        .contact-box a {
+            width: 60%;
+            background: transparent;
+            border: none;
+            text-decoration: none;
+            color: white;
+        }
+
+        .sidebar ::placeholder {
+            color: white;
+        }
+
+        hr {
+            margin: 40px 0;
+        }
+
+        .copy {
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .border {
+            border-bottom-style: double;
+            height: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col col-2">
+                    <img src="./Project/logo.png" alt="image not found">
+                </div>
+                <nav>
+                    <div class="col col-10">
+                        <ul>
+                            <li><a href='#' class="active">Home</a></li>
+                            <li><a href='#'>About</a></li>
+                            <li><a href='#'>Service 1</a></li>
+                            <li><a href='#'>Service 2</a></li>
+                            <li><a href='#'>Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <section class="hero-banner">
+            <div class="hero-banner-image">
+                <div class="content">
+                    <div class="col col-6">
+                        <h1>Practical Solution that Empower your Bussiness Growth</h1>
+                        <a href="#"><i class="fa-solid fa-phone"></i> Contact Us Today</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="col">
+                <h4>Who we are?</h4>
+            </div>
+            <h2>
+                A team of professionals having ‘Feet On street’ & ‘Hands on Shelf’ experience in the FMCG & Supermarket
+                industry.
+            </h2>
+            <p>We assure business growth through participative execution in the market & on the shop floor.
+            </p>
+            <p>
+                Together, we can achieve practical yet extraordinary outcomes.
+            </p>
+            <a href="#" class="ctn">Know More</a>
+        </div>
+    </section>
+    <section class="dark-bg section">
+        <div class="container">
+            <div class="section-content">
+                <h4>What we do?</h4>
+                <h2>We do small changes for BIG impact to drive Business Growth.</h2>
+                <div class="border"></div>
+                <div class="row">
+                    <div class="col col-8">
+                        <h4>Sales & Distribution</h4>
+                        <p>We help you to create relevant channel network & sales team for last mile outlet.</p>
+                        <ul>
+                            <li>Area Mapping</li>
+                            <li>Distribution & Channel Network</li>
+                            <li>Brand Activation</li>
+                            <li>Sales Team Building.</li>
+                        </ul>
+                        <div><a href="#" class="ctn">Know More</a>
+                        </div>
+                    </div>
+                    <div class="col col-4">
+                        <img src="./Project/r.jpg" alt="" class="image-responsive">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-4">
+                        <img src="./Project/r.jpg" alt="" class="image-responsive">
+                    </div>
+                    <div class="col col-8">
+                        <h4>Sales & Distribution</h4>
+                        <p>We help you to create relevant channel network & sales team for last mile outlet.</p>
+                        <ul>
+                            <li>Area Mapping</li>
+                            <li>Distribution & Channel Network</li>
+                            <li>Brand Activation</li>
+                            <li>Sales Team Building.</li>
+                        </ul>
+                        <div>
+                            <a href="#" class="ctn">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="section">
+            <div class="container">
+                <div class="col">
+                    <div class="footer-text">
+                        <h2>We Work to : Change - achieve - Grow.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-9 light-bg">
+                        <h3>Get In Touch</h3>
+                        <div class="form-content">
+                            <input type="text" name="name" value="" placeholder="Name*">
+                        </div>
+                        <div class="form-content">
+                            <input type="text" name="name" value="" placeholder="Email*">
+                        </div>
+                        <div class="form-content">
+                            <input type="text" name="name" value="" placeholder="Contact*">
+                        </div>
+                        <h4>Looking For <span>*</span></h4>
+                        <div class="form-content">
+                            <input type="radio" name="" value="">
+                            <lable>Distribution Expansion</lable>
+                        </div>
+                        <div class="form-content">
+                            <input type="radio" name="" value="">
+                            <lable>Supermarket Consultancy</lable>
+                        </div>
+                        <div class="form-content">
+                            <input type="radio" name="" value="">
+                            <lable>Distributorship</lable>
+                        </div>
+                        <div>
+                            <input type="submit" name="s" value="Submit">
+                        </div>
+                    </div>
+                    <div class="col col-3 sidebar">
+                        <h3>Contact us</h3>
+                        <div class="border"></div>
+                        <label>Whatsapp</label>
+                        <div class="sidebar-content">
+                            <i class="fa-solid fa-phone"> </i>
+                            <a href="#">+91 74000 246 178</a>
+                        </div>
+                        <label>Write to us</label>
+                        <div class="sidebar-content">
+                            <i class="fa-solid fa-envelope"> </i>
+                            <a href="#">connectus@expos.in</a>
+                        </div>
+                        <label>Office hours</label>
+                        <div class="sidebar-content">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="#">Mon-Fri 10:00AM-7:00PM</a>
+                        </div>
+                        <label>Social Media</label>
+                        <div class="sidebar-content">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-4">
+                        <label>Call us</label>
+                        <div class="contact">
+                            <i class="fa-solid fa-phone"> </i>
+                            <a href="#">+91 74000 246 178</a>
+                        </div>
+                    </div>
+                    <div class="col col-4">
+                        <label>Write to us</label>
+                        <div class="contact">
+                            <i class="fa-solid fa-envelope"> </i>
+                            <a href="#">connectus@expos.in</a>
+                        </div>
+                    </div>
+                    <div class="col col-4">
+                        <label>Office hours</label>
+                        <div class="contact">
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="#">Mon-Fri 10:00AM-7:00PM</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="copy">
+                    <p>&copy; Copyright 2022 Exepos.All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
